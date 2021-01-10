@@ -29,14 +29,15 @@
         >
           <a href="#" class="d-flex text-muted">
             <div>
-              <!--              <img-->
-              <!--                :src="design.user.photo_url"-->
-              <!--                width="20"-->
-              <!--                class="profile rounded mr-2"-->
-              <!--              />-->
+                            <img
+                              :src="design.user.photo_url"
+                              width="20"
+                              class="profile rounded mr-2"
+                              v-if="design.user"
+                            />
             </div>
             <h3 class="card-title font-13 mt-1 mb-2 fw-400">
-              <!--              {{ design.user.name }}-->
+                            {{ design.user ? design.user.name : 'test'  }}
               <span
                 v-if="design.team"
                 class="badge badge-pill badge-secondary text-white font-10 pr-1 pl-1 fw-300"

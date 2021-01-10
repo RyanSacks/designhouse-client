@@ -37,7 +37,7 @@ export default {
     destroyComment(){
       this.$axios
           .delete(`/comments/${this.comment.id}`)
-          .then(res => this.$edit('deleted', this.comment.id))
+          .then(res => this.$emit('deleted', this.comment.id))
           .catch(e => console.log(e));
     }
   }
